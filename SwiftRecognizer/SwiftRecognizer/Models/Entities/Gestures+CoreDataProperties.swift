@@ -15,5 +15,8 @@ import CoreData
 extension Gestures {
 
     @NSManaged var name: String?
+    @NSManaged var itemType: NSNumber?
+    @NSManaged var image: NSData?
+    @NSManaged var directions: NSObject?
 
 }

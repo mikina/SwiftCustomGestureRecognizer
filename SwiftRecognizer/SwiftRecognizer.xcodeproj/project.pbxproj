@@ -21,6 +21,9 @@
 		27E7D94E1C713C4E00D8A089 /* RecognizerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D94C1C713C4E00D8A089 /* RecognizerModel.xcdatamodeld */; };
 		27E7D9601C7143B500D8A089 /* Gestures+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D95E1C7143B500D8A089 /* Gestures+CoreDataProperties.swift */; };
 		27E7D9611C7143B500D8A089 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D95F1C7143B500D8A089 /* Gestures.swift */; };
+		27E7D9631C71DE7100D8A089 /* ConfigurationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D9621C71DE7100D8A089 /* ConfigurationDetailsViewController.swift */; };
+		27E7D9661C72097000D8A089 /* DrawCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D9651C72096F00D8A089 /* DrawCanvas.swift */; };
+		27E7D9681C72098000D8A089 /* DrawCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E7D9671C72098000D8A089 /* DrawCanvas.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		27E7D9501C713CE500D8A089 /* SwiftRecognizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftRecognizer-Bridging-Header.h"; sourceTree = "<group>"; };
 		27E7D95E1C7143B500D8A089 /* Gestures+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gestures+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		27E7D95F1C7143B500D8A089 /* Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gestures.swift; sourceTree = "<group>"; };
+		27E7D9621C71DE7100D8A089 /* ConfigurationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationDetailsViewController.swift; sourceTree = "<group>"; };
+		27E7D9651C72096F00D8A089 /* DrawCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCanvas.swift; sourceTree = "<group>"; };
+		27E7D9671C72098000D8A089 /* DrawCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawCanvas.xib; sourceTree = "<group>"; };
 		ABBBE120AC77949053692C76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E58D1FDFF3711971BC656641 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F96FC9FCA1CCD1C25BC63E28 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,7 @@
 			children = (
 				27E7D93E1C71185700D8A089 /* InputGestureViewController.swift */,
 				27E7D9451C71324A00D8A089 /* ConfigurationViewController.swift */,
+				27E7D9621C71DE7100D8A089 /* ConfigurationDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		27E7D9401C71283400D8A089 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				27E7D9641C72095E00D8A089 /* DrawCanvas */,
 				27E7D9411C71283C00D8A089 /* PathFinder.swift */,
 				27E7D9431C71320F00D8A089 /* CustomGestureRecognizer.swift */,
 				27E7D94A1C71397A00D8A089 /* SetupManager.swift */,
@@ -127,6 +135,15 @@
 				27E7D95F1C7143B500D8A089 /* Gestures.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		27E7D9641C72095E00D8A089 /* DrawCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				27E7D9651C72096F00D8A089 /* DrawCanvas.swift */,
+				27E7D9671C72098000D8A089 /* DrawCanvas.xib */,
+			);
+			path = DrawCanvas;
 			sourceTree = "<group>";
 		};
 		3E34530F5CA75A6E18D2AD45 /* Frameworks */ = {
@@ -208,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E7D9351C7113C700D8A089 /* LaunchScreen.storyboard in Resources */,
+				27E7D9681C72098000D8A089 /* DrawCanvas.xib in Resources */,
 				27E7D9321C7113C700D8A089 /* Assets.xcassets in Resources */,
 				27E7D9301C7113C700D8A089 /* Main.storyboard in Resources */,
 			);
@@ -271,7 +289,9 @@
 				27E7D94B1C71397A00D8A089 /* SetupManager.swift in Sources */,
 				27E7D93F1C71185700D8A089 /* InputGestureViewController.swift in Sources */,
 				27E7D9491C71393800D8A089 /* GestureModel.swift in Sources */,
+				27E7D9631C71DE7100D8A089 /* ConfigurationDetailsViewController.swift in Sources */,
 				27E7D92B1C7113C700D8A089 /* AppDelegate.swift in Sources */,
+				27E7D9661C72097000D8A089 /* DrawCanvas.swift in Sources */,
 				27E7D9441C71320F00D8A089 /* CustomGestureRecognizer.swift in Sources */,
 				27E7D94E1C713C4E00D8A089 /* RecognizerModel.xcdatamodeld in Sources */,
 				27E7D9601C7143B500D8A089 /* Gestures+CoreDataProperties.swift in Sources */,

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DrawCanvas" customModule="SwiftRecognizer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-sN-fly">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.87058823529999996" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DKd-sN-fly" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CGR-kJ-zKq"/>
+                <constraint firstAttribute="trailing" secondItem="DKd-sN-fly" secondAttribute="trailing" id="GjA-b6-McH"/>
+                <constraint firstItem="DKd-sN-fly" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ONf-Or-gDl"/>
+                <constraint firstAttribute="bottom" secondItem="DKd-sN-fly" secondAttribute="bottom" id="ZPw-cY-Dbi"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="DKd-sN-fly" id="Q2g-h6-rYV"/>
+            </connections>
+        </view>
+    </objects>
+</document>
