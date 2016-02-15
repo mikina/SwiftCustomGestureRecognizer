@@ -28,4 +28,14 @@ class Gestures: NSManagedObject {
     }
   }
   
+  class func update(item: Gestures, name: String, itemType: NSNumber, image: NSData, directions: NSObject) -> Gestures? {
+    item.name = name
+    item.itemType = itemType
+    item.image = image
+    item.directions = directions
+    
+    NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+    return item;
+  }
+  
 }

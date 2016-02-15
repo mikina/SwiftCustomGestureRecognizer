@@ -52,17 +52,18 @@ class ConfigurationDetailsViewController: UIViewController, UITextFieldDelegate 
         if let imgData = model.image {
           if let image = UIImage(data: imgData, scale: 1.0) {
             canvas.setupWithImage(image)
+            self.gestureImage = image
           }
+        }
+        
+        if let dir = model.directions {
+          self.directions = dir as! [Int]
         }
       }
       else {
         self.title = NSLocalizedString("New gesture", comment: "New gesture")
       }
     }
-    
-    
-    
-
   }
 
   override func didReceiveMemoryWarning() {
@@ -93,6 +94,7 @@ class ConfigurationDetailsViewController: UIViewController, UITextFieldDelegate 
   }
   
   func saveItem() -> Bool {
+
     guard let img = self.gestureImage else {
       return false
     }
@@ -101,8 +103,15 @@ class ConfigurationDetailsViewController: UIViewController, UITextFieldDelegate 
       return false
     }
     
-    if let _ = Gestures.create(self.gestureName.text!, itemType: NSNumber(int: self.gestureType.rawValue), image: imgData, directions: self.directions) {
-      return true
+    if let itemExists = self.gestureEntity {
+      if let _ = Gestures.update(itemExists, name: self.gestureName.text!, itemType: NSNumber(int: self.gestureType.rawValue), image: imgData, directions: self.directions) {
+        return true
+      }
+    }
+    else {
+      if let _ = Gestures.create(self.gestureName.text!, itemType: NSNumber(int: self.gestureType.rawValue), image: imgData, directions: self.directions) {
+        return true
+      }
     }
     
     return false
