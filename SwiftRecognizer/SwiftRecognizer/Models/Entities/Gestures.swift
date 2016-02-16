@@ -38,4 +38,8 @@ class Gestures: NSManagedObject {
     return item;
   }
   
+  class func deleteGesture(item: Gestures) {
+    item.MR_deleteEntityInContext(NSManagedObjectContext.MR_defaultContext())
+  }
+  
 }

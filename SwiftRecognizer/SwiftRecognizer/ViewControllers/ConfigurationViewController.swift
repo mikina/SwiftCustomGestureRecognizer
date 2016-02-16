@@ -45,7 +45,34 @@ class ConfigurationViewController: UIViewController, UITableViewDataSource, UITa
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return (items?.count)!
+    if let items = self.items {
+        return items.count
+    }
+    else {
+        return 0
+    }
+  }
+    
+  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+    return .Delete
+  }
+  
+  func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if editingStyle == .Delete {
+      if var items = self.items {
+        let gestureItem = items[indexPath.row]
+        Gestures.deleteGesture(gestureItem)
+        self.items!.removeAtIndex(indexPath.row)
+        
+        tableView.beginUpdates()
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        tableView.endUpdates()
+      }
+    }    
   }
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
