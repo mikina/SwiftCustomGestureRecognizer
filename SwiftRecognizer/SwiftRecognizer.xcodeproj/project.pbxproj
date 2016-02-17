@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08601EE37FAABCEF05B947C9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96FC9FCA1CCD1C25BC63E28 /* Pods.framework */; };
+		272CE6131C7487CB00238715 /* GestureActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272CE6121C7487CA00238715 /* GestureActionHandler.swift */; };
 		27E7D92B1C7113C700D8A089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D92A1C7113C700D8A089 /* AppDelegate.swift */; };
 		27E7D9301C7113C700D8A089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E7D92E1C7113C700D8A089 /* Main.storyboard */; };
 		27E7D9321C7113C700D8A089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E7D9311C7113C700D8A089 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272CE6121C7487CA00238715 /* GestureActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureActionHandler.swift; sourceTree = "<group>"; };
 		27E7D9271C7113C700D8A089 /* SwiftRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E7D92A1C7113C700D8A089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E7D92F1C7113C700D8A089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				27E7D9411C71283C00D8A089 /* PathFinder.swift */,
 				27E7D9431C71320F00D8A089 /* CustomGestureRecognizer.swift */,
 				27E7D94A1C71397A00D8A089 /* SetupManager.swift */,
+				272CE6121C7487CA00238715 /* GestureActionHandler.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				27E7D92B1C7113C700D8A089 /* AppDelegate.swift in Sources */,
 				27E7D9661C72097000D8A089 /* DrawCanvas.swift in Sources */,
 				27E7D9441C71320F00D8A089 /* CustomGestureRecognizer.swift in Sources */,
+				272CE6131C7487CB00238715 /* GestureActionHandler.swift in Sources */,
 				27E7D94E1C713C4E00D8A089 /* RecognizerModel.xcdatamodeld in Sources */,
 				27E7D9601C7143B500D8A089 /* Gestures+CoreDataProperties.swift in Sources */,
 				27E7D9611C7143B500D8A089 /* Gestures.swift in Sources */,

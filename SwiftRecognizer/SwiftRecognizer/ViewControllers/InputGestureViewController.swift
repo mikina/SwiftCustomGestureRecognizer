@@ -51,7 +51,11 @@ class InputGestureViewController: UIViewController {
   func recognized(item: CustomGestureRecognizer) {
     if item.state == .Ended {
       if let recognized = item.recognizedShape {
-        print(recognized.name)
+        let handler = GestureActionHanlder()
+        handler.openCamera = { [weak self] (picker: UIImagePickerController) in
+          self?.presentViewController(picker, animated: true, completion: nil)
+        }
+        handler.handleAction(recognized.gestureType)
       }
     }
   }
