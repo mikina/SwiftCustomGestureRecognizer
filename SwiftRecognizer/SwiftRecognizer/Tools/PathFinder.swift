@@ -51,7 +51,7 @@ class PathFinder {
     return atan2(y, x)
   }
   
-  func recognizeShape(input: [Int]) {
+  func recognizeShape(input: [Int]) -> GestureModel? {
     var selected: GestureModel?
     var bestResult: Double = 0.0
     
@@ -61,14 +61,13 @@ class PathFinder {
         bestResult = result
         selected = item
       }
-      
-      print("result: \(result)")
     }
     
-    if bestResult >= 0.8 {
-      print("selected: \(selected?.name)")
+    if bestResult >= 0.6 {
+      return selected
     }
     
+    return nil
   }
   
   func compareArrays(a: [Int], b: [Int]) -> Double {

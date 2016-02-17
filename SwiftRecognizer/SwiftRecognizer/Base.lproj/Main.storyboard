@@ -25,11 +25,11 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="peU-fA-i7y" id="caf-HJ-PGJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e46-Nz-jOa">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,9 +158,24 @@
                     <view key="view" contentMode="scaleToFill" id="nAa-De-Lfz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-tp-j9N" customClass="DrawCanvas" customModule="SwiftRecognizer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B3m-tp-j9N" secondAttribute="trailing" id="8Ho-Oa-9kV"/>
+                            <constraint firstItem="btM-TT-jQd" firstAttribute="top" secondItem="B3m-tp-j9N" secondAttribute="bottom" id="N1o-F1-3EX"/>
+                            <constraint firstItem="B3m-tp-j9N" firstAttribute="leading" secondItem="nAa-De-Lfz" secondAttribute="leading" id="PtT-fG-mmE"/>
+                            <constraint firstItem="B3m-tp-j9N" firstAttribute="top" secondItem="bPO-9V-KQh" secondAttribute="bottom" id="qVl-ws-fm0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oae-KI-SYH"/>
+                    <connections>
+                        <outlet property="gestureDrawSpace" destination="B3m-tp-j9N" id="7SO-xV-A5A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEl-6N-lnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

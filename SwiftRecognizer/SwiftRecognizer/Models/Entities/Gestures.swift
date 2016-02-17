@@ -42,4 +42,19 @@ class Gestures: NSManagedObject {
     item.MR_deleteEntityInContext(NSManagedObjectContext.MR_defaultContext())
   }
   
+  class func getAllElementsAsGestureModel() -> [GestureModel] {
+    var model: [GestureModel] = []
+    
+    if let data = Gestures.MR_findAll() as? [Gestures] {
+      for item in data {
+        if let name = item.name, directions = item.directions, itemType = item.itemType {
+          let type = GestureType(rawValue: itemType.intValue)!
+          let gesture: GestureModel = GestureModel(name: name, directions: directions as! [Int], type: type)
+          model.append(gesture)
+        }
+      }
+    }
+    
+    return model
+  }
 }
